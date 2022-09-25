@@ -4,8 +4,8 @@ class CreateBokes < ActiveRecord::Migration[6.1]
       t.string :boke
       t.string :image_url
 
-      t.timestamps TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-      t.created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+      t.timestamps :created_at, null: false, default: ->{ "CURRENT_TIMESTAMP" }
+      t.created_at :updated_at, null: false, default: ->{ "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP" }
     end
   end
 end
