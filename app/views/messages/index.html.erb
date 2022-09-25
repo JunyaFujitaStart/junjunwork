@@ -1,0 +1,125 @@
+<%= stylesheet_link_tag "index", :media => "all" %>
+<%= stylesheet_link_tag "modal", :media => "all" %>
+
+<wrapper>
+<h1>To brighten<br> your<br> happiness</h1>
+<header class="top_index">
+  <nav>
+    <div class="top-left">
+      <!--<p class="search"><%= image_tag 'search_white.png', size: '25x25' %></p>-->
+      <!--<p>search</p>-->
+    </div>
+        
+        
+    <div class="top-center">  
+      
+    </div>
+      
+    <div class="top-right">
+      <div id="modalOpen" class="menu">MENU</div>
+    </div>
+  </nav>
+</header>
+<div class="under"><p>あなたの幸せを輝かせるために！</p></div>
+
+<div class="above"><p>企業名</p></div>
+<section class="our_name">
+  <div>
+    <h3>株式会社 to・you （トゥ・ユー）</h3>
+    <p>私たちは、お客様のために、共に働く仲間のために、「笑顔」になれる何かを追求するための会社です。<br>
+    具体的なサービスとしては、<br>
+    1 インターネットサイトの構築（HTML/CSS/JavaScriptなどの言語で開発するフロントエンド系のサイト）<br>
+    2 tiktokerの動画コンテンツ販売、写真素材、グッズ作成、プロモーション活動、広告宣伝などのマーケティング活動<br>
+    3 アプリケーション開発(Ruby on railsによるデータベースを備えたサイト構築 ＋ API / Python　などによる、ユーザーを楽しませるWebアプリケーションの開発)<br>
+    を主軸に、その時々で、お客様の要望に応じたシステム開発により、収益を得ています。
+    </p>
+  </div>
+</section>
+<div class="under"></div>
+
+
+<div class="above"><p>企業情報</p></div>
+<section class="our_business">
+  <div>
+    <p>企業理念</p>
+    <p class="idea"><span>お客様のために、共に働く仲間のために、「笑顔」を追求することです。<br>
+    周囲の人が笑顔になれるシステムを提案したり、お客様の要望にお応えできる開発を
+    進めていけるような人材が、to_youには必要です。</span></p>
+  </div>
+  <div　class="our_total">
+      <p>会社概要</p>
+<table class="table table-bordered col-sm-12">
+  <tbody>
+    <tr>
+      <th scope="row col-sm-2">名称</th>
+      <td scope="col-sm-3">株式会社 to_you</td>
+    </tr>
+    <tr>
+      <th scope="row">代表</th>
+      <td>to_you</td>
+    </tr>
+    <tr>
+      <th scope="row">代表電話番号</th>
+      <td>06-0606-0606</td>
+    </tr>
+    <tr>
+      <th scope="row">FAX番号</th>
+      <td>06-0707-0707</td>
+    </tr>
+    <tr>
+      <th scope="row">資本金</th>
+      <td>500万</td>
+    </tr>
+     <tr>
+      <th scope="row">所在地（本社）</th>
+      <td>〒555-0041 大阪府大阪市西淀川区中島２丁目２−４５(仮)</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</section>
+
+<div class="above"><p>アクセス</p></p></div>
+<section class="map">
+  <div><%= image_tag 'アクセス2.jpg', size: '500x350' %><p>JR御幣島駅→本拠所在地</p></div>
+  <div><%= image_tag 'アクセス1.png', size: '500x350' %><p>なんば線　福駅→本拠所在地</p></div>
+</section>
+<div class="under">事業内容</div>
+  <div class="contents_bar">
+    <span class="A"><%= link_to 'https://myfavorite.sakura.ne.jp/' do %><%= image_tag 'Frontend1.jpg', size: '450x350' %><% end %><p>サイト作成者のポートフォリオサイト。フロントエンドよりのサイト「my portfolio」</p></span>
+    <span class="B"><%= link_to bokes_path do %><%= image_tag 'BOKE_up.png', size: '450x350' %><% end %><p>Webアプリケーションの作成　「Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke」</p></span>
+    <span class="C"><%= link_to 'https://bookreview20220205.herokuapp.com/' do %><%= image_tag 'MYFAVORITES_up.jpeg', size: '450x350' %><% end %><p>Webアプリケーションの作成　「楽天の書籍検索APIを利用したブックレビューサイト myfavorites」</p></span>
+  </div>
+  
+<div class="text_slider"><p>Welcome to my page, 「タイトル（考え中）」!!オーダーメイドいけます！！</p></div>
+
+  <!--モーダルウィンドウ（MENUクリック時に呼び出されるHTML/CSS要素）-->
+  <div id="easyModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Great job 🎉</h2>
+        <span class="modalClose">×</span>
+      </div>
+      <div class="modal-body">
+        <p>You've just displayed this awesome Modal Window!</p>
+        <p>Let's enjoy learning JavaScript ☺️</p>
+        <a href="https://twitter.com/unounounouno31"><img class="twitter_icon" src="/assets/twitter_icon.jpeg" alt="twitter" width="30" height="30"></a>
+        <a href="https://www.youtube.com/"><img class="youtube_icon" src="/assets/youtube.jpeg" alt="youtube" width="30" height="30"></a>
+        <p></p>
+        <ul>
+          <nav>
+            <li><%= link_to '会社概要', root_path, class: "text-decoration-none" %></li>
+            <li><%= link_to 'my portfolio (フロントエンドより)', 'https://myfavorite.sakura.ne.jp/', class: "text-decoration-none" %></li>
+            <li><%= link_to 'Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke', bokes_path, class: "text-decoration-none" %></li>
+          </nav>
+        </ul>
+        <div>今までのサイト（別ページへ）　</div>
+        <p><%= link_to '楽天の書籍検索APIを用いたブックレビューサイト myfavorites ', 'https://bookreview20220205.herokuapp.com/', class: "text-decoration-none" %></p>
+      </div>
+    </div>
+  </div>
+  <!--モーダルウィンドウ（終）-->
+</wrapper>
+ <%= javascript_include_tag 'index', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    

@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag "bokes_index", :media => "all" %>
+
+ <section>
+  <span class="btn btn-primary"><%= link_to 'ボケを選びに戻る', bokes_path(id: :id) %></span>
+  <div>
+    <% @img_url.each_with_index do |img_url, i| %>
+    <figure id="figure2" class="card">
+    <figcaption>No. <%= i+1 %></figcaption>
+    <p class="image card-img-top" alt="..."><%= image_tag img_url.image_url,width: '350px', height: '350px'  %></p>
+    <span class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"><%= img_url.boke  %></p>
+        <div class = "btn-space">
+        </div>
+      </span>
+    </figure>
+    <% end %>
+  </div>
+</section>

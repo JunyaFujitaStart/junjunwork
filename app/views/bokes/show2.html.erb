@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag 'bokes_index', :media => 'all' %>
+
+<wrapper>
+  <h4>ランダム</h4>
+  <section>
+  <span class="btn btn-primary"><%= link_to 'ボケを選びに戻る', bokes_path(id: :id) %></span>
+  <div>
+    <figure class="card" style="width: 400px;">
+    <figcaption>ランダムで表示</figcaption>
+    <p class="image card-img-top" alt="..."><%= image_tag @random_image,width: '350px', height: '350px'  %></p>
+    <span class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="./bokes/new" class="btn btn-primary">ボケる</a>
+      </span>
+    </figure>
+  </div>
+</section>
+
+<footer>
+<%= link_to '新規メッセージの投稿', new_message_path %>
+</footer>
+</wrapper>
