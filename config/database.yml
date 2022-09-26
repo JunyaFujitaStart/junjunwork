@@ -49,9 +49,9 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
   database: EC_movie_production
   username: EC_movie
   password: <%= ENV['EC_MOVIE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
