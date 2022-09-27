@@ -1,12 +1,6 @@
 class BokesController < ApplicationController
 
   def index
-    pip = 0
-    if pip=0
-    `pip install -r requirements.txt`
-    pip = 1
-    end
-    
     # sc1.pyで1ページ目スクレイピング開始
     
     @result = `python3 sc1.py`
