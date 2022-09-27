@@ -3,7 +3,7 @@ class BokesController < ApplicationController
   def index
     # sc1.pyで1ページ目スクレイピング開始
     
-    @result = `python3 #{Rails.root}/app/controllers/sc1.py`
+    @result = `python3 https://junjunwork.herokuapp.com/bokes/app/controllers/sc1.py`
 
     @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
                 url.include?("jpg")
@@ -19,7 +19,7 @@ class BokesController < ApplicationController
     
     # sc1.pyで1ページ目スクレイピング終了
     # sc2.pyで2ページ目スクレイピング開始
-    @result = `python3 #{Rails.root}/app/controllers/sc2.py`
+    @result = `python3 https://junjunwork.herokuapp.com/bokes/app/controllers/sc2.py`
 
     @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
                 url.include?("jpg")
@@ -33,7 +33,7 @@ class BokesController < ApplicationController
     end
     # sc2.pyで2ページ目スクレイピング終了
     # sc3.pyで3ページ目スクレイピング開始
-    @result = `python3 #{Rails.root}/app/controllers/sc3.py`
+    @result = `python3 https://junjunwork.herokuapp.com/bokes/app/controllers/sc3.py`
 
     @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
                 url.include?("jpg")
