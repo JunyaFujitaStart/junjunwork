@@ -2,8 +2,9 @@ class BokesController < ApplicationController
 
   def index
     # sc1.pyで1ページ目スクレイピング開始
-    
+   
     @result = `python3 https://junjunwork.herokuapp.com/app/controllers/sc1.py`
+    # 開発環境の時　`python3 #{Rails.root}/app/controllers/sc1.py`
 
     @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
                 url.include?("jpg")
