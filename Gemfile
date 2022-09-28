@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
@@ -49,3 +49,7 @@ gem 'carrierwave', '~> 1.0'
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
+gem 'net-ftp', '~> 0.1'
+gem 'net-imap', '~> 0.2'
+gem 'net-pop', '~> 0.1'
+gem 'net-smtp', '~> 0.3'
